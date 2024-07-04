@@ -2,9 +2,11 @@
 const once = (f) => {
   let flag = 0;
   return (...args) => {
-    if (flag) return undefined;
-    flag = 1;
-    return f(...args);
+    if (!flag) {
+      //'undefine'은 코드에는 안쓰는게 좋다.
+      flag = 1;
+      return f(...args);
+    }
   };
 };
 const fn = once((x, y) => `금일 운행금지 차량은 끝번호 ${x}, ${y}입니다!`);
