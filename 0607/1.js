@@ -2,9 +2,8 @@
 for (let i = 0.1; i < 1; i = i + 0.1) {
   console.log(Math.round(i * 10) / 10);
 }
-// 쓰레기값 붙을 수도 있음,,
-
-// 예시
+// 쓰레기값 붙을 수도 있으므로 다른 방법도 고안 해볼것
+// 다른 방법
 for (let i = 0.1; i < 1; i = i + 0.1) {
   console.log(+i.toFixed(1));
 }
